@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a MiEstacionamiento</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/nuestros-servicios.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h2 class="logo"><i class="ri-parking-box-line"></i>MiEstacionamiento</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
+            <a href="nuestros-servicios.html">Nuestros Servicios</a>
+            <a href="contacto.html">Contacto</a>
+            <button class="btnlogin-popup" onclick="redirectToLoginPage()">Iniciar Sesion</button>
+            <button class="btnsignup-popup" onclick="redirectToRegisterPage()">Registrarse</button>
+        </nav>
+    </header>
+    
+    <section>
+        <div class="container">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Servicios de MiEstacionamiento</h3>
+                    <p class="card-text">
+                        MiEstacionamiento ofrece servicios de estacionamiento a todos los clientes registrados. Nuestra plataforma permite a los usuarios registrarse con sus datos personales y agregar sus vehículos para acceder instantáneamente al servicio de tarifa de estacionamiento.
+                    </p>
+                    <p class="card-text">
+                        También brindamos la posibilidad a los arrendatarios de registrar sus estacionamientos y habilitarlos para todo el público. Esto permite una mayor disponibilidad de espacios de estacionamiento y una gestión más eficiente.
+                    </p>
+                    <p class="card-text">
+                        Nuestro enfoque se centra en brindar una experiencia cómoda y segura a nuestros clientes al encontrar y utilizar nuestros servicios de estacionamiento. Estamos comprometidos en optimizar la movilidad y la comodidad, proporcionando soluciones modernas y adaptadas a las necesidades de nuestros usuarios.
+                    </p>
+                    <h3 class="card-title">Preguntas Frecuentes - ¿Como Arrendar un Estacionamiento?</h3>
+                </div>
+                
+                <div class="faq">
+                    <div class="question" onclick="toggleAnswer(1)">¿Cuáles son los requisitos para arrendar un estacionamiento?</div>
+                    <div class="answer" id="answer1">Los requisitos para arrendar un estacionamiento pueden variar según el lugar, pero generalmente se solicita una identificación válida, un comprobante de domicilio y el pago de un depósito de garantía.</div>
+                  </div>
+                  
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer(2)">¿Cómo puedo encontrar estacionamientos disponibles para arrendar?</div>
+                    <div class="answer" id="answer2">Puedes buscar estacionamientos disponibles para arrendar en línea a través de plataformas especializadas o contactar directamente a empresas o particulares que ofrecen estacionamientos en tu área.</div>
+                  </div>
+                  
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer(3)">¿Cuál es la duración mínima y máxima del arrendamiento de un estacionamiento?</div>
+                    <div class="answer" id="answer3">La duración mínima y máxima del arrendamiento de un estacionamiento puede variar. Algunos lugares pueden requerir un contrato mínimo de un mes, mientras que otros pueden ofrecer arrendamientos a corto plazo por horas o días.</div>
+                  </div>
+                  
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer(4)">¿Cómo se realiza el pago del arrendamiento del estacionamiento?</div>
+                    <div class="answer" id="answer4">El pago del arrendamiento del estacionamiento se acuerda entre el arrendatario y el propietario. Puede ser mensual, semanal o según el período acordado. Algunos lugares pueden requerir el pago por adelantado, mientras que otros pueden permitir pagos mensuales.</div>
+                  </div>
+                  
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer(5)">¿Qué sucede si tengo un problema con el estacionamiento arrendado?</div>
+                    <div class="answer" id="answer5">Si tienes algún problema con el estacionamiento arrendado, debes comunicarte con el propietario o la empresa responsable lo antes posible para que puedan resolver el problema. Puede ser un problema con la accesibilidad, seguridad u otros aspectos relacionados con el estacionamiento.</div>
+                  </div>
+                  
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer(6)">¿Se puede cancelar el arrendamiento del estacionamiento antes de tiempo?</div>
+                    <div class="answer" id="answer6">La posibilidad de cancelar el arrendamiento del estacionamiento antes de tiempo depende de los términos y condiciones acordados en el contrato. Algunos contratos pueden tener una cláusula de penalización por cancelación anticipada, mientras que otros pueden permitir la cancelación con un aviso previo.</div>
+                  </div>
+                  
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer(7)">¿Se puede renovar el arrendamiento del estacionamiento al final del período?</div>
+                    <div class="answer" id="answer7">La renovación del arrendamiento del estacionamiento al final del período depende de los términos acordados en el contrato y la disponibilidad del estacionamiento. Algunos contratos pueden incluir opciones de renovación automática, mientras que otros pueden requerir una negociación y firma de un nuevo contrato.</div>
+                  </div>
+            </div>
+        </div>
+      
+      
+      
+      
+    </section>
+    
+    <script>
+        function redirectToRegisterPage() {
+            window.location.href = "registrar.html";
+        }
+    </script>
+    
+    <script type="text/javascript" src="scripts.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleAnswer(id) {
+          var answer = document.getElementById("answer" + id);
+          answer.classList.toggle("show");
+        }
+      </script>
+</body>
+</html>
