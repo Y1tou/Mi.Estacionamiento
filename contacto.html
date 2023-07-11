@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenidos a MiEstacionamiento</title>
+    <link rel="stylesheet" href="css/contacto.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <h2 class="logo"><i class="ri-parking-box-line"></i>MiEstacionamiento</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
+            <a href="nuestros-servicios.html">Nuestros Servicios</a>
+            <a href="contacto.html">Contacto</a>
+            <button class="btnlogin-popup" onclick="redirectToLoginPage()">Iniciar Sesion</button>
+            <button class="btnsignup-popup" onclick="redirectToRegisterPage()">Registrarse</button>
+
+        </nav>
+    </header>
+    <section>
+        <div class="container">
+            <h3>Contactanos</h3>
+            <form action="enviarCorreo.php" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="ri-user-fill"></i>
+                            </span>
+                        </div>
+                        <input type="text" class="form-control" id="nombre"  name="nombre" placeholder="Ingrese su nombre" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Tel茅fono</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="ri-phone-fill" ></i>
+                            </span>
+                        </div>
+                        <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ingrese su tel茅fono" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo electr贸nico</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="ri-mail-fill"></i>
+                            </span>
+                        </div>
+                        <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingrese su correo electr贸nico" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="ri-chat-4-fill"></i>
+                            </span>
+                        </div>
+                        <textarea class="form-control" id="mensaje" name="mensaje" rows="4" placeholder="Ingrese su mensaje" required></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+        </div>
+    </section>
+    
+    <script>
+        function redirectToRegisterPage() {
+            window.location.href = "registrar.html";
+        }
+    </script>
+    
+<script type="text/javascript" src="scripts.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
