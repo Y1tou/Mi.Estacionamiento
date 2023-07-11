@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de inicio de sesión - Estacionamiento</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+   
+    
+</head>
+<body>
+    <header>
+        <h2 class="logo"><i class="ri-parking-box-line"></i>MiEstacionamiento</h2>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="sobre-nosotros.html">Sobre Nosotros</a>
+            <a href="nuestros-servicios.html">Nuestros Servicios</a>
+            <a href="contacto.html">Contacto</a>
+            <button class="btnlogin-popup" onclick="redirectToLoginPage()">Iniciar Sesion</button>
+            <button class="btnsignup-popup" onclick="redirectToRegisterPage()">Registrarse</button>
+
+        </nav>
+    </header>
+    <section>
+        <div class="container form-container">
+            <div class="text-center">
+              <i class="fas fa-user user-icon"></i>
+              <h3>LOGIN</h3>
+            </div>
+            <form method="post" action="login.php">
+                <input type="hidden" id="tipo-usuario" name="tipo-usuario" value="cliente">
+              <div class="form-group">
+                <label for="correo">Correo electrónico:</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                  </div>
+                  <input type="email" class="form-control" id="correo" name="correo" placeholder="Ingrese su correo electrónico" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="contrasena">Contraseña:</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                  </div>
+                  <input type="password" class="form-control" id="contrasena" name="password" placeholder="Ingrese su contraseña" required>
+                </div>
+              </div>
+              <div class="button-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="leftClick()">Cliente</button>
+                <button type="button" class="toggle-btn" onclick="rightClick()">Arrendatario</button>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Acceder</button>
+            </form>
+            <div class="text-center mt-3">
+              <a href="#" class="olpast">¿Olvidaste tu contraseña?</a>
+            </div>
+          </div>
+        </section>
+          <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        
+          <script src="https://kit.fontawesome.com/b0ebb4a09c.js" crossorigin="anonymous"></script>
+          <script>
+            
+            var tipoUsuario = document.getElementById('tipo-usuario');
+            
+            function leftClick() {
+              btn.style.left = '0';
+              tipoUsuario.value = 'cliente';
+            }
+          
+            function rightClick() {
+              btn.style.left = '50%';
+              tipoUsuario.value = 'arrendatario';
+            }
+            
+            function redirectToLoginPage() {
+                window.location.href = "login.html";
+            }
+            
+            function redirectToRegisterPage() {
+                window.location.href = "registrar.html";
+            }
+            
+          </script>
+    
+
+</body>
+</html> 
